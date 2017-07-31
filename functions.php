@@ -119,7 +119,7 @@ add_action( 'widgets_init', 'starting_block_widgets_init' );
 function starting_block_scripts() {
 	wp_enqueue_style( 'starting-block-style', get_stylesheet_uri() );
 
-	wp_enqueue_script( 'starting-block-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
+	wp_enqueue_script( 'starting-block-navigation', get_template_directory_uri() . '/assets/js/navigation.js', array(), '20151215', true );
 
 	wp_enqueue_script( 'starting-block-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151215', true );
 
