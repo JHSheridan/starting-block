@@ -16,8 +16,6 @@ Use it to make something cool, have fun, and share what you've learned with othe
 Starting Block is based on Underscores http://underscores.me/, (C) 2012-2016 Automattic, Inc.
 Underscores is distributed under the terms of the GNU GPL v2 or later.
 
-Normalizing styles have been helped along thanks to the fine work of
-Nicolas Gallagher and Jonathan Neal http://necolas.github.io/normalize.css/
 */
 
 /*--------------------------------------------------------------
@@ -46,9 +44,11 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.io/normalize.css/
 @import "mixins/mixins-master";
 
 /*--------------------------------------------------------------
-# Normalize
+# Libraries imported with Bower
 --------------------------------------------------------------*/
-@import "normalize";
+@import "../../bower_components/normalize-scss/_normalize.scss";
+@import "../../bower_components/susy/sass/_susy.scss";
+@import "../../bower_components/breakpoint-sass/stylesheets/_breakpoint.scss";
 
 /*--------------------------------------------------------------
 # Typography
@@ -74,26 +74,6 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.io/normalize.css/
 # Accessibility
 --------------------------------------------------------------*/
 @import "modules/accessibility";
-
-/*--------------------------------------------------------------
-# Alignments
---------------------------------------------------------------*/
-@import "modules/alignments";
-
-/*--------------------------------------------------------------
-# Clearings
---------------------------------------------------------------*/
-@import "modules/clearings";
-
-/*--------------------------------------------------------------
-# Widgets
---------------------------------------------------------------*/
-@import "site/secondary/widgets";
-
-/*--------------------------------------------------------------
-# Content
---------------------------------------------------------------*/
-@import "site/site";
 
 /*--------------------------------------------------------------
 # Infinite scroll

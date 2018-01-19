@@ -1,0 +1,19 @@
+{
+  "name": "starting-block",
+  "version": "0.0.1",
+  "description": "Wordpress starter theme featuring Underscores, Gulp, Susy, Breakpoint and more",
+  "author": "John H. Sheridan <john@jhsheridan.com>",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "app/bower_components",
+    "test",
+    "tests"
+  ],
+  "devDependencies": {
+    "breakpoint-sass": "~2.7.0",
+    "normalize-scss": "~3.0.3",
+    "susy": "~2.2.12"
+  }
+}
