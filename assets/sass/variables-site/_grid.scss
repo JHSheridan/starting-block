@@ -1,0 +1,17 @@
+$susy: (
+  columns: 4,
+  container: 1200px,
+  gutters: .15,
+  debug: (
+    image: show,
+    color: rgba(red, .25),
+  )
+);
+
+
+//Breakpoints
+$xs: 450px;
+$sm: 600px;
+$md: 850px;
+$lg: 1000px;
+$nav: 725px;

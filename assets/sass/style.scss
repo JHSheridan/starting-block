@@ -19,26 +19,7 @@ Underscores is distributed under the terms of the GNU GPL v2 or later.
 */
 
 /*--------------------------------------------------------------
->>> TABLE OF CONTENTS:
-----------------------------------------------------------------
-# Normalize
-# Typography
-# Elements
-# Forms
-# Navigation
-	## Links
-	## Menus
-# Accessibility
-# Alignments
-# Clearings
-# Widgets
-# Content
-	## Posts and pages
-	## Comments
-# Infinite scroll
-# Media
-	## Captions
-	## Galleries
+# Variables and Mixins
 --------------------------------------------------------------*/
 @import "variables-site/variables-site";
 @import "mixins/mixins-master";
@@ -66,21 +47,17 @@ Underscores is distributed under the terms of the GNU GPL v2 or later.
 @import "forms/forms";
 
 /*--------------------------------------------------------------
+# Sections
+--------------------------------------------------------------*/
+@import "sections/sections";
+
+/*--------------------------------------------------------------
 # Navigation
 --------------------------------------------------------------*/
 @import "navigation/navigation";
 
 /*--------------------------------------------------------------
-# Accessibility
+# Modules
 --------------------------------------------------------------*/
 @import "modules/accessibility";
-
-/*--------------------------------------------------------------
-# Infinite scroll
---------------------------------------------------------------*/
 @import "modules/infinite-scroll";
-
-/*--------------------------------------------------------------
-# Media
---------------------------------------------------------------*/
-@import "media/media";
