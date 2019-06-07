@@ -1,6 +1,6 @@
 {
   "name": "starting-block",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Wordpress starter theme featuring Underscores, Gulp, Susy, Breakpoint and more",
   "author": "John H. Sheridan <john@jhsheridan.com>",
   "ignore": [
@@ -17,3 +17,4 @@
     "susy": "~2.2.12"
   }
 }
+

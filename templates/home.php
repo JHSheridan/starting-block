@@ -6,6 +6,6 @@
 
 get_header(); ?>
 
-<h1>Home Page Content Area</h1>
+<h1>Home Page Content</h1>
 
 <?php get_footer(); ?>
