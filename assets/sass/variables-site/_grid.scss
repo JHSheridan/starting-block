@@ -1,15 +1,8 @@
-$susy: (
-  columns: 4,
-  container: 1200px,
-  gutters: .15,
-  debug: (
-    image: show,
-    color: rgba(red, .25),
-  )
-);
+// Container settings
+$container-max-width: 1200px;
+$container-padding: 1rem;
 
-
-//Breakpoints
+// Breakpoints
 $xs: 450px;
 $sm: 600px;
 $md: 850px;

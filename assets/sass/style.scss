@@ -3,7 +3,7 @@ Theme Name: Starting Block
 Theme URI: http://underscores.me/
 Author: John H. Sheridan
 Author URI: http://JHSheridan.com
-Description: Wordpress starter theme featuring Underscores, Gulp, Sass, Susy, Breakpoint and more
+Description: Modern WordPress starter theme featuring Underscores, Gulp, Sass, and CSS Grid
 Version: 1.0.0
 License: GNU General Public License v2 or later
 License URI: LICENSE
@@ -21,43 +21,40 @@ Underscores is distributed under the terms of the GNU GPL v2 or later.
 /*--------------------------------------------------------------
 # Variables and Mixins
 --------------------------------------------------------------*/
-@import "variables-site/variables-site";
-@import "mixins/mixins-master";
+@use "index" as *;
 
 /*--------------------------------------------------------------
-# Libraries imported with Bower
+# Base Styles
 --------------------------------------------------------------*/
-@import "../../bower_components/normalize-scss/_normalize.scss";
-@import "../../bower_components/susy/sass/_susy.scss";
-@import "../../bower_components/breakpoint-sass/stylesheets/_breakpoint.scss";
+@use "base/normalize" as *;
 
 /*--------------------------------------------------------------
 # Typography
 --------------------------------------------------------------*/
-@import "typography/typography";
+@use "typography/typography" as *;
 
 /*--------------------------------------------------------------
 # Elements
 --------------------------------------------------------------*/
-@import "elements/elements";
+@use "elements/elements" as *;
 
 /*--------------------------------------------------------------
 # Forms
 --------------------------------------------------------------*/
-@import "forms/forms";
+@use "forms/forms" as *;
 
 /*--------------------------------------------------------------
 # Sections
 --------------------------------------------------------------*/
-@import "sections/sections";
+@use "sections/sections" as *;
 
 /*--------------------------------------------------------------
 # Navigation
 --------------------------------------------------------------*/
-@import "navigation/navigation";
+@use "navigation/navigation" as *;
 
 /*--------------------------------------------------------------
 # Modules
 --------------------------------------------------------------*/
-@import "modules/accessibility";
-@import "modules/infinite-scroll";
+@use "modules/accessibility" as *;
+@use "modules/infinite-scroll" as *;
