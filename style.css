@@ -29,10 +29,19 @@ Underscores is distributed under the terms of the GNU GPL v2 or later.
 /**
  * 1. Correct the line height in all browsers.
  * 2. Prevent adjustments of font size after orientation changes in iOS.
+ * 3. Set box-sizing for theme consistency.
  */
 html {
   line-height: 1.15; /* 1 */
   -webkit-text-size-adjust: 100%; /* 2 */
+  box-sizing: border-box; /* 3 - from elements */
+}
+
+/* Inherit box-sizing to make it easier to change the property for components */
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
 }
 
 /* Sections
@@ -63,13 +72,12 @@ h1 {
 /* Grouping content
    ========================================================================== */
 /**
- * 1. Add the correct box sizing in Firefox.
- * 2. Show the overflow in Edge and IE.
+ * Theme-specific HR styling (overrides normalize defaults)
  */
 hr {
-  box-sizing: content-box; /* 1 */
-  height: 0; /* 1 */
-  overflow: visible; /* 2 */
+  border: 0;
+  height: 1px;
+  margin-bottom: 1.5em;
 }
 
 /**
@@ -150,9 +158,12 @@ sup {
    ========================================================================== */
 /**
  * Remove the border on images inside links in IE 10.
+ * Make images responsive by default.
  */
 img {
   border-style: none;
+  height: auto; /* Make sure images are scaled correctly. */
+  max-width: 100%; /* Adhere to container width. */
 }
 
 /* Forms
@@ -332,9 +343,27 @@ template {
   display: none;
 }
 
-/*--------------------------------------------------------------
-# Typography
---------------------------------------------------------------*/
+/* Theme-specific base styles
+   ========================================================================== */
+blockquote, q {
+  quotes: "" "";
+}
+blockquote:before, blockquote:after, q:before, q:after {
+  content: "";
+}
+
+figure {
+  margin: 1em 0; /* Extra wide images within figure tags don't overflow the content area. */
+}
+
+.wrap {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+/* Typography
+   ========================================================================== */
 body,
 button,
 input,
@@ -351,48 +380,10 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /*--------------------------------------------------------------
-# Elements
---------------------------------------------------------------*/
-html {
-  box-sizing: border-box;
-}
-
-*,
-*:before,
-*:after { /* Inherit box-sizing to make it easier to change the property for components that leverage other behavior; see http://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/ */
-  box-sizing: inherit;
-}
-
-blockquote, q {
-  quotes: "" "";
-}
-blockquote:before, blockquote:after, q:before, q:after {
-  content: "";
-}
-
-hr {
-  border: 0;
-  height: 1px;
-  margin-bottom: 1.5em;
-}
-
-img {
-  height: auto; /* Make sure images are scaled correctly. */
-  max-width: 100%; /* Adhere to container width. */
-}
-
-figure {
-  margin: 1em 0; /* Extra wide images within figure tags don't overflow the content area. */
-}
-
-.wrap {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 1rem;
-}
-
-/*--------------------------------------------------------------
 # Forms
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+## Buttons
 --------------------------------------------------------------*/
 button,
 input[type=button],
@@ -406,6 +397,9 @@ input[type=submit] {
   line-height: 1;
   padding: 0.6em 1em 0.4em;
 }
+/*--------------------------------------------------------------
+## Fields
+--------------------------------------------------------------*/
 input[type=text],
 input[type=email],
 input[type=url],
@@ -430,7 +424,7 @@ textarea {
 }
 
 /*--------------------------------------------------------------
-# Sections
+# Layout
 --------------------------------------------------------------*/
 .site-header {
   background-color: #AAA;
@@ -450,14 +444,10 @@ textarea {
 }
 
 /*--------------------------------------------------------------
-# Navigation
+# Components
 --------------------------------------------------------------*/
-.menu-toggle {
-  display: none;
-}
-
 /*--------------------------------------------------------------
-# Modules
+## Accessibility
 --------------------------------------------------------------*/
 /* Text meant only for screen readers. */
 .screen-reader-text {
@@ -491,6 +481,9 @@ textarea {
   outline: 0;
 }
 
+/*--------------------------------------------------------------
+## Infinite Scroll
+--------------------------------------------------------------*/
 /* Globally hidden elements when Infinite Scroll is supported and in use. */
 .infinite-scroll .posts-navigation,
 .infinite-scroll.neverending .site-footer { /* Theme Footer (when set to scrolling) */
@@ -500,6 +493,13 @@ textarea {
 /* When Infinite Scroll has reached its end we need to re-display elements that were hidden (via .neverending) before. */
 .infinity-end.neverending .site-footer {
   display: block;
+}
+
+/*--------------------------------------------------------------
+## Navigation
+--------------------------------------------------------------*/
+.menu-toggle {
+  display: none;
 }
 
 /*# sourceMappingURL=style.css.map */

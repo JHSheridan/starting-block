@@ -1,0 +1,21 @@
+// Site Layout - Header, Content, Footer
+
+.site-header {
+	background-color: #AAA;
+	height: 100px;
+
+	.site-branding {
+		h1 {
+			margin: 0;
+		}
+	}
+}
+
+.site-content {
+	padding: 50px 0;
+}
+
+.site-footer {
+	background-color: #AAA;
+	padding: 10px;
+} 

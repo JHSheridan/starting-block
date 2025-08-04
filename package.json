@@ -1,6 +1,6 @@
 {
   "name": "starting-block",
-  "description": "Modern WordPress starter theme featuring CSS Grid, Sass, and Gulp build system.",
+  "description": "Modern WordPress starter theme featuring CSS Grid, Sass, and CLI-based build system.",
   "version": "1.0.0",
   "author": "John H. Sheridan <john@jhsheridan.com>",
   "license": "MIT",

@@ -1,3 +1,5 @@
+@use "index" as *;
+
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 
 /* Document
@@ -6,11 +8,20 @@
 /**
  * 1. Correct the line height in all browsers.
  * 2. Prevent adjustments of font size after orientation changes in iOS.
+ * 3. Set box-sizing for theme consistency.
  */
 
 html {
   line-height: 1.15; /* 1 */
   -webkit-text-size-adjust: 100%; /* 2 */
+  box-sizing: border-box; /* 3 - from elements */
+}
+
+/* Inherit box-sizing to make it easier to change the property for components */
+*,
+*:before,
+*:after {
+	box-sizing: inherit;
 }
 
 /* Sections
@@ -22,6 +33,7 @@ html {
 
 body {
   margin: 0;
+  //background: $color__background-body; /* Fallback for when there is no custom background color defined. */
 }
 
 /**
@@ -46,14 +58,14 @@ h1 {
    ========================================================================== */
 
 /**
- * 1. Add the correct box sizing in Firefox.
- * 2. Show the overflow in Edge and IE.
+ * Theme-specific HR styling (overrides normalize defaults)
  */
 
 hr {
-  box-sizing: content-box; /* 1 */
-  height: 0; /* 1 */
-  overflow: visible; /* 2 */
+	//background-color: $color__background-hr;
+	border: 0;
+	height: 1px;
+	margin-bottom: 1.5em;
 }
 
 /**
@@ -143,10 +155,13 @@ sup {
 
 /**
  * Remove the border on images inside links in IE 10.
+ * Make images responsive by default.
  */
 
 img {
   border-style: none;
+  height: auto; /* Make sure images are scaled correctly. */
+  max-width: 100%; /* Adhere to container width. */
 }
 
 /* Forms
@@ -346,4 +361,46 @@ template {
 
 [hidden] {
   display: none;
+}
+
+/* Theme-specific base styles
+   ========================================================================== */
+
+blockquote, q {
+	quotes: "" "";
+
+	&:before,
+	&:after {
+		content: "";
+	}
+}
+
+figure {
+	margin: 1em 0; /* Extra wide images within figure tags don't overflow the content area. */
+}
+
+.wrap {
+	max-width: $container-max-width;
+	margin: 0 auto;
+	padding: 0 $container-padding;
+}
+
+/* Typography
+   ========================================================================== */
+
+body,
+button,
+input,
+select,
+optgroup,
+textarea {
+	//color: $color__text-main;
+	//font-family: $font__main;
+	@include font-size(1);
+	//line-height: $font__line-height-body;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	clear: both;
+	color: $blue;
 } 
